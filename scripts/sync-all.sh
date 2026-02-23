@@ -148,8 +148,15 @@ for repo in $REPOS; do
 
   # deploy.yml を復元
   if [ -f "$BACKUP_DIR/.github/workflows/deploy.yml" ]; then
+    # 既存リポジトリ: バックアップから復元（branches: [main] を維持）
     if ! cmp -s "$BACKUP_DIR/.github/workflows/deploy.yml" ".github/workflows/deploy.yml" 2>/dev/null; then
       cp "$BACKUP_DIR/.github/workflows/deploy.yml" ".github/workflows/deploy.yml"
+      git add ".github/workflows/deploy.yml"
+    fi
+  else
+    # 新規リポジトリ: テンプレートの branches をデフォルトブランチ(main)に書き換え
+    if [ -f ".github/workflows/deploy.yml" ]; then
+      sed -i "s/branches: \[${TEMPLATE_BRANCH}\]/branches: [main]/" .github/workflows/deploy.yml
       git add ".github/workflows/deploy.yml"
     fi
   fi
