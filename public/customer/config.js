@@ -3,39 +3,47 @@
 
 window.DASHBOARD_CONFIG = {
   "brand": {
-    "name": "",
+    "name": "ゆずにぃ宝箱",
     "sidebarTitle": "　color sing",
     "footerText": "",
     "footerSubText": "",
     "footerNote": "",
     "pageTitle": "サイト名を設定 - 特典管理",
-    "loadingEmoji": "🎵",
+    "loadingEmoji": "🍯",
     "loadingText": "Loading...",
     "showTitle": true,
-    "titleGradient": true,
+    "titleGradient": false,
     "titleGradientDirection": "to-r"
   },
   "colors": {
-    "deepBlue": "#0a1628",
-    "oceanTeal": "#1b4965",
-    "lightBlue": "#8ab4f8",
-    "amber": "#d4a574",
-    "accent": "#c1121f",
+    "deepBlue": "#ffa200",
+    "oceanTeal": "#feeccd",
+    "lightBlue": "#e07040",
+    "amber": "#fdc835",
+    "accent": "#c83040",
     "gold": "#ffd700"
   },
   "colorOverrides": {
-    "headerGradientStart": "",
+    "headerGradientStart": "#ffffb3",
     "headerGradientEnd": "",
-    "primaryText": "",
-    "accentText": "",
+    "cardBorder": "",
+    "cardBorderHover": "",
+    "primaryText": "#2b2008",
+    "accentText": "#ba5d36",
     "rank1Card": "",
-    "titleColor": ""
+    "backgroundMain": "",
+    "backgroundMid": "",
+    "nameText": "#2c0e02",
+    "footerText": "",
+    "contentText": "#2c0e02",
+    "titleColor": "",
+    "glassBgColor": "#ffd500"
   },
   "fonts": {
-    "display": "'Playfair Display', serif",
-    "displayUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap",
-    "body": "'M PLUS 2', sans-serif",
-    "bodyUrl": "https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;500;700&display=swap",
+    "display": "'M PLUS Rounded 1c', sans-serif",
+    "displayUrl": "https://fonts.googleapis.com/css2?family=M%20PLUS%20Rounded%201c:wght@400;500;700&display=swap",
+    "body": "'M PLUS Rounded 1c', sans-serif",
+    "bodyUrl": "https://fonts.googleapis.com/css2?family=M%20PLUS%20Rounded%201c:wght@400;500;700&display=swap",
     "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
   },
   "images": {
@@ -44,7 +52,7 @@ window.DASHBOARD_CONFIG = {
     "favicon": "./customer/vite.svg"
   },
   "sheets": {
-    "spreadsheetId": "",
+    "spreadsheetId": "1-HbWK_-RuNYTt5jHklwrM-LQMzSOttBa2Vb51L0C_GQ",
     "rankingSheetName": "目標管理・ランキング",
     "benefitsSheetName": "特典管理",
     "benefitsContentSheetName": "特典内容",
@@ -67,13 +75,14 @@ window.DASHBOARD_CONFIG = {
     },
     {
       "id": "menu",
-      "label": "Menu",
-      "icon": "🍸",
-      "enabled": true
+      "label": "特典一覧",
+      "icon": "🎼",
+      "enabled": true,
+      "title": "特典一覧"
     },
     {
       "id": "rights",
-      "label": "ボトルキープ",
+      "label": "特典権利者",
       "icon": "👥",
       "enabled": true,
       "title": "ボトルキープ一覧"
@@ -98,52 +107,21 @@ window.DASHBOARD_CONFIG = {
       "key": "5k",
       "icon": "🎵",
       "columnIndex": 1,
-      "displayTemplate": "強制リクエスト: {value}曲"
+      "displayTemplate": "獲得済！",
+      "isBoolean": true
     },
     {
       "key": "10k",
       "icon": "🎮",
       "columnIndex": 2,
-      "displayTemplate": "権利: {value}時間分"
+      "displayTemplate": "権利: {value}曲分"
     },
     {
-      "key": "20k",
+      "key": "15k",
       "icon": "💬",
       "columnIndex": 3,
-      "displayTemplate": "オープンチャット招待済",
-      "isBoolean": true
-    },
-    {
-      "key": "30k",
-      "icon": "🎤",
-      "columnIndex": 4,
-      "displayTemplate": "アカペラ音源獲得: {value}曲"
-    },
-    {
-      "key": "40k",
-      "icon": "⚡",
-      "columnIndex": 5,
-      "displayTemplate": "強制リクエスト: {value}曲"
-    },
-    {
-      "key": "50k",
-      "icon": "🏆",
-      "columnIndex": 6,
-      "displayTemplate": "ミックス音源獲得: {value}曲"
-    },
-    {
-      "key": "メンバーシップA",
-      "icon": "👑",
-      "columnIndex": 7,
-      "displayTemplate": "月内リクエスト対応中",
-      "isMembership": true
-    },
-    {
-      "key": "メンバーシップB",
-      "icon": "🌟",
-      "columnIndex": 0,
-      "displayTemplate": "特典: {value}",
-      "isMembership": true
+      "displayTemplate": "権利: {value}曲分",
+      "isBoolean": false
     }
   ],
   "home": {
@@ -180,7 +158,7 @@ window.DASHBOARD_CONFIG = {
   },
   "effects": {
     "iconFloat": true,
-    "particles": "bubble",
+    "particles": "none",
     "particleDirection": "up",
     "particleColor": "",
     "particleSize": 0.5,
@@ -188,9 +166,9 @@ window.DASHBOARD_CONFIG = {
   },
   "deploy": {
     "owner": "colorsing-dashboard",
-    "repo": "",
+    "repo": "yuzukkuma",
     "branch": "main",
-    "token": ""
+    "token": "rev:MAAF0D7sAT3FGYVFdBgEaIFs6riQQvX9g3TH8SvK35iXMziMvVYfFgCQeyZ_xY5Z1yWetC0i0IMBSTQB11_tap_buhtig"
   },
   "admin": {
     "password": "",
