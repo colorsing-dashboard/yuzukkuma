@@ -57,7 +57,7 @@ window.DASHBOARD_CONFIG = {
   },
   "images": {
     "headerDesktop": "https://drive.google.com/file/d/1rzEh50gQEOGJKtGgY72a6HxPNoImOWws/view?usp=drivesdk",
-    "headerMobile": "https://drive.google.com/file/d/1NEy2FLOI99YKIvnG7vQynwKNxjqlllbb/view?usp=drivesdk",
+    "headerMobile": "https://drive.google.com/file/d/1nS9rsuWC3wym2hDXU6Wj2MJSP2gSAxip/view?usp=drivesdk",
     "favicon": "./customer/vite.svg"
   },
   "sheets": {
