@@ -3,7 +3,7 @@
 
 window.DASHBOARD_CONFIG = {
   "brand": {
-    "name": "ゆずにぃ宝箱",
+    "name": "ゆずにぃの宝箱",
     "sidebarTitle": "　color sing",
     "footerText": "あああ",
     "footerSubText": "あああ",
@@ -13,9 +13,9 @@ window.DASHBOARD_CONFIG = {
     "loadingText": "Loading...",
     "showHeader": true,
     "showTitle": true,
-    "titleGradient": false,
+    "titleGradient": true,
     "titleGradientDirection": "to-r",
-    "titleGlow": false
+    "titleGlow": true
   },
   "colors": {
     "deepBlue": "#100808",
@@ -56,8 +56,8 @@ window.DASHBOARD_CONFIG = {
     "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
   },
   "images": {
-    "headerDesktop": "https://drive.google.com/file/d/1Nl0wjFLHTfc8tobdiBJ64fWJ8y7aBTFe/view?usp=drivesdk",
-    "headerMobile": "https://drive.google.com/file/d/18K5QkXb9KywxZWk8UH7HkwuEc0VM4rV-/view?usp=drivesdk",
+    "headerDesktop": "https://drive.google.com/file/d/1rzEh50gQEOGJKtGgY72a6HxPNoImOWws/view?usp=drivesdk",
+    "headerMobile": "https://drive.google.com/file/d/1NEy2FLOI99YKIvnG7vQynwKNxjqlllbb/view?usp=drivesdk",
     "favicon": "./customer/vite.svg"
   },
   "sheets": {
