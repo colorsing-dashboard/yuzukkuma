@@ -49,19 +49,19 @@ window.DASHBOARD_CONFIG = {
     "glassBgOpacity": 0
   },
   "fonts": {
-    "display": "'M PLUS Rounded 1c', sans-serif",
-    "displayUrl": "https://fonts.googleapis.com/css2?family=M%20PLUS%20Rounded%201c:wght@400;500;700&display=swap",
+    "display": "'Dancing Script', cursive",
+    "displayUrl": "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap",
     "body": "'M PLUS Rounded 1c', sans-serif",
     "bodyUrl": "https://fonts.googleapis.com/css2?family=M%20PLUS%20Rounded%201c:wght@400;500;700&display=swap",
     "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
   },
   "images": {
-    "headerDesktop": "",
-    "headerMobile": "",
+    "headerDesktop": "https://drive.google.com/file/d/1Nl0wjFLHTfc8tobdiBJ64fWJ8y7aBTFe/view?usp=drivesdk",
+    "headerMobile": "https://drive.google.com/file/d/18K5QkXb9KywxZWk8UH7HkwuEc0VM4rV-/view?usp=drivesdk",
     "favicon": "./customer/vite.svg"
   },
   "sheets": {
-    "spreadsheetId": "",
+    "spreadsheetId": "1-HbWK_-RuNYTt5jHklwrM-LQMzSOttBa2Vb51L0C_GQ",
     "rankingSheetName": "目標管理・ランキング",
     "benefitsSheetName": "特典管理",
     "benefitsContentSheetName": "特典内容",
