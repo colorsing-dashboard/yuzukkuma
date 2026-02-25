@@ -114,20 +114,20 @@ window.DASHBOARD_CONFIG = {
     },
     {
       "key": "5k",
-      "icon": "🎵",
+      "icon": "🖼️",
       "columnIndex": 1,
       "displayTemplate": "獲得済！",
       "isBoolean": true
     },
     {
       "key": "10k",
-      "icon": "🎮",
+      "icon": "🎤",
       "columnIndex": 2,
       "displayTemplate": "権利: {value}曲分"
     },
     {
       "key": "15k",
-      "icon": "💬",
+      "icon": "📝",
       "columnIndex": 3,
       "displayTemplate": "権利: {value}曲分",
       "isBoolean": false
@@ -168,10 +168,10 @@ window.DASHBOARD_CONFIG = {
   },
   "effects": {
     "iconFloat": true,
-    "particles": "none",
-    "particleDirection": "up",
-    "particleColor": "",
-    "particleSize": 0.5,
+    "particles": "star",
+    "particleDirection": "down",
+    "particleColor": "#ffff00",
+    "particleSize": 0.75,
     "particleOpacity": 1
   },
   "deploy": {
