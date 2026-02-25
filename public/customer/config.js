@@ -15,13 +15,13 @@ window.DASHBOARD_CONFIG = {
     "showTitle": true,
     "titleGradient": true,
     "titleGradientDirection": "to-r",
-    "titleGlow": true
+    "titleGlow": false
   },
   "colors": {
     "deepBlue": "#100808",
     "oceanTeal": "#241010",
-    "lightBlue": "#e0ac3e",
-    "amber": "#f3903f",
+    "lightBlue": "#e07040",
+    "amber": "#f0c048",
     "accent": "#c83040",
     "gold": "#ffd700"
   },
@@ -44,9 +44,9 @@ window.DASHBOARD_CONFIG = {
     "titleColor": "",
     "subText": "",
     "popupOverlayColor": "",
-    "popupOverlayOpacity": 0,
-    "glassBgColor": "#703838",
-    "glassBgOpacity": 0
+    "popupOverlayOpacity": "",
+    "glassBgColor": "",
+    "glassBgOpacity": ""
   },
   "fonts": {
     "display": "'Dancing Script', cursive",
