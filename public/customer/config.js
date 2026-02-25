@@ -13,7 +13,7 @@ window.DASHBOARD_CONFIG = {
     "loadingText": "Loading...",
     "showHeader": true,
     "showTitle": true,
-    "titleGradient": true,
+    "titleGradient": false,
     "titleGradientDirection": "to-r",
     "titleGlow": false
   },
