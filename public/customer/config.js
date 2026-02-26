@@ -137,6 +137,12 @@ window.DASHBOARD_CONFIG = {
       "icon": "⭐",
       "columnIndex": 5,
       "displayTemplate": "特典: {value}"
+    },
+    {
+      "key": "",
+      "icon": "⭐",
+      "columnIndex": 6,
+      "displayTemplate": "特典: {value}"
     }
   ],
   "home": {
