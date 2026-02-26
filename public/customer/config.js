@@ -85,7 +85,7 @@ window.DASHBOARD_CONFIG = {
     {
       "id": "menu",
       "label": "特典一覧",
-      "icon": "🎼",
+      "icon": "🎁",
       "enabled": true,
       "title": "採蜜量一覧"
     },
