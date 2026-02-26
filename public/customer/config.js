@@ -9,7 +9,7 @@ window.DASHBOARD_CONFIG = {
     "footerSubText": "今日も明日も楽しくなぁれ🪄",
     "footerNote": "© produced by  まぐろふぉん",
     "pageTitle": "採蜜壺 - 特典管理",
-    "loadingEmoji": "🍯",
+    "loadingEmoji": "🍯🧸",
     "loadingText": "Loading...",
     "showHeader": true,
     "showTitle": true,
@@ -49,10 +49,10 @@ window.DASHBOARD_CONFIG = {
     "glassBgOpacity": ""
   },
   "fonts": {
-    "display": "'Dancing Script', cursive",
-    "displayUrl": "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap",
-    "body": "'M PLUS Rounded 1c', sans-serif",
-    "bodyUrl": "https://fonts.googleapis.com/css2?family=M%20PLUS%20Rounded%201c:wght@400;500;700&display=swap",
+    "display": "'Hachi Maru Pop', cursive",
+    "displayUrl": "https://fonts.googleapis.com/css2?family=Hachi%20Maru%20Pop:wght@400&display=swap",
+    "body": "'RocknRoll One', sans-serif",
+    "bodyUrl": "https://fonts.googleapis.com/css2?family=RocknRoll%20One:wght@400&display=swap",
     "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap"
   },
   "images": {
