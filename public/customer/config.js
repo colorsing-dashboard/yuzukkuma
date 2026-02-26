@@ -101,7 +101,7 @@ window.DASHBOARD_CONFIG = {
       "label": "枠内アイコン",
       "icon": "🖼️",
       "enabled": true,
-      "title": "各種枠内アイコン(1kアイコンは00月からどうぞ)"
+      "title": "各種枠内アイコン"
     }
   ],
   "benefitTiers": [
