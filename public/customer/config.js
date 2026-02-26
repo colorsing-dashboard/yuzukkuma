@@ -8,7 +8,7 @@ window.DASHBOARD_CONFIG = {
     "footerText": "あああ",
     "footerSubText": "あああ",
     "footerNote": "あああ",
-    "pageTitle": "サイト名を設定 - 特典管理",
+    "pageTitle": "採蜜壺 - 特典管理",
     "loadingEmoji": "🍯",
     "loadingText": "Loading...",
     "showHeader": true,
@@ -87,21 +87,21 @@ window.DASHBOARD_CONFIG = {
       "label": "特典一覧",
       "icon": "🎼",
       "enabled": true,
-      "title": "特典一覧"
+      "title": "採蜜量一覧"
     },
     {
       "id": "rights",
-      "label": "特典権利者",
+      "label": "採集者リスト",
       "icon": "👥",
       "enabled": true,
-      "title": "採蜜一覧"
+      "title": "獲得一覧"
     },
     {
       "id": "icons",
       "label": "枠内アイコン",
       "icon": "🖼️",
       "enabled": true,
-      "title": "枠内アイコン"
+      "title": "各種枠内アイコン(1kアイコンは00月からどうぞ)"
     }
   ],
   "benefitTiers": [
@@ -135,14 +135,27 @@ window.DASHBOARD_CONFIG = {
     {
       "key": "20k",
       "icon": "⭐",
-      "columnIndex": 5,
-      "displayTemplate": "特典: {value}"
+      "columnIndex": 4,
+      "displayTemplate": "権利: {value}曲分"
     },
     {
-      "key": "",
-      "icon": "⭐",
-      "columnIndex": 6,
-      "displayTemplate": "特典: {value}"
+      "key": "30k",
+      "icon": "🎧",
+      "columnIndex": 5,
+      "displayTemplate": "権利: {value}回分"
+    },
+    {
+      "key": "旬10k",
+      "icon": "🖼️",
+      "columnIndex": 0,
+      "displayTemplate": "獲得済!!",
+      "isBoolean": true
+    },
+    {
+      "key": "旬20k",
+      "icon": "👑",
+      "columnIndex": 7,
+      "displayTemplate": "グッズ: {value}個分"
     }
   ],
   "home": {
@@ -169,6 +182,10 @@ window.DASHBOARD_CONFIG = {
         {
           "question": "NG行為は?",
           "answer": "他の採集者に迷惑を掛ける行為は御遠慮ください。\n注意しても是正していただけない場合は入場をお断りすることもあります。"
+        },
+        {
+          "question": "※お願い",
+          "answer": "いつも応援ありがとうございます🙇‍♂️\n私は皆様と短期的なお付き合いを望んではおりません。\n出来るだけ長く仲良くしていただきたいと思っております。\n何卒ご無理はなさらぬようお願い申し上げます。\n来てくれるだけで、コメントをいただけるだけでとても嬉しいです。\n今後とも宜しくお願い致します。"
         }
       ]
     }
