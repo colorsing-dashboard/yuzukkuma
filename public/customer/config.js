@@ -5,9 +5,9 @@ window.DASHBOARD_CONFIG = {
   "brand": {
     "name": "ゆずにぃの蜜壺",
     "sidebarTitle": "　color sing",
-    "footerText": "あああ",
-    "footerSubText": "あああ",
-    "footerNote": "あああ",
+    "footerText": "🐻蜂蜜はいいよなぁ🍯",
+    "footerSubText": "今日も明日も楽しくなぁれ🪄",
+    "footerNote": "© produced by  まぐろふぉん",
     "pageTitle": "採蜜壺 - 特典管理",
     "loadingEmoji": "🍯",
     "loadingText": "Loading...",
