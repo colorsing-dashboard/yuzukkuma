@@ -3,7 +3,7 @@
 
 window.DASHBOARD_CONFIG = {
   "brand": {
-    "name": "ゆずにぃの宝箱",
+    "name": "ゆずにぃの蜜壺",
     "sidebarTitle": "　color sing",
     "footerText": "あああ",
     "footerSubText": "あああ",
@@ -13,16 +13,16 @@ window.DASHBOARD_CONFIG = {
     "loadingText": "Loading...",
     "showHeader": true,
     "showTitle": true,
-    "titleGradient": false,
+    "titleGradient": true,
     "titleGradientDirection": "to-r",
     "titleGlow": false
   },
   "colors": {
-    "deepBlue": "#100808",
-    "oceanTeal": "#241010",
-    "lightBlue": "#e07040",
-    "amber": "#f0c048",
-    "accent": "#c83040",
+    "deepBlue": "#0c0a04",
+    "oceanTeal": "#8a844d",
+    "lightBlue": "#c89828",
+    "amber": "#e8d080",
+    "accent": "#ff0000",
     "gold": "#ffd700"
   },
   "colorOverrides": {
@@ -33,12 +33,12 @@ window.DASHBOARD_CONFIG = {
     "titleGradientEnd": "",
     "cardBorder": "",
     "cardBorderHover": "",
-    "primaryText": "",
+    "primaryText": "#d8e84a",
     "accentText": "",
     "rank1Card": "",
     "backgroundMain": "",
     "backgroundMid": "",
-    "nameText": "",
+    "nameText": "#ffffff",
     "footerText": "",
     "contentText": "",
     "titleColor": "",
@@ -94,7 +94,7 @@ window.DASHBOARD_CONFIG = {
       "label": "特典権利者",
       "icon": "👥",
       "enabled": true,
-      "title": "ボトルキープ一覧"
+      "title": "採蜜一覧"
     },
     {
       "id": "icons",
@@ -131,21 +131,40 @@ window.DASHBOARD_CONFIG = {
       "columnIndex": 3,
       "displayTemplate": "権利: {value}曲分",
       "isBoolean": false
+    },
+    {
+      "key": "20k",
+      "icon": "⭐",
+      "columnIndex": 5,
+      "displayTemplate": "特典: {value}"
     }
   ],
   "home": {
     "rankingTitle": "Ranking",
-    "pointsLabel": "歌推しPt",
-    "pointsUnit": "k",
+    "pointsLabel": "採蜜",
+    "pointsUnit": "kg",
     "targetsTitle": "Targets",
     "targetLabels": [
-      "今旬の目標",
+      "通年目標",
       "今月の目標"
     ],
     "faq": {
       "enabled": true,
       "title": "📝 FAQ・注意事項",
-      "items": []
+      "items": [
+        {
+          "question": "採集量を増やすとどうなるの?",
+          "answer": "より多く主で遊べます"
+        },
+        {
+          "question": "採集量が少ないと楽しめない?",
+          "answer": "楽しみ方は皆様それぞれ。\n採蜜は計画的に。"
+        },
+        {
+          "question": "NG行為は?",
+          "answer": "他の採集者に迷惑を掛ける行為は御遠慮ください。\n注意しても是正していただけない場合は入場をお断りすることもあります。"
+        }
+      ]
     }
   },
   "menu": {
@@ -155,7 +174,7 @@ window.DASHBOARD_CONFIG = {
     "errorTitle": "エラー",
     "errorMessage": "データの読み込みに失敗しました。しばらくしてから再度お試しください。",
     "retryButton": "再読み込み",
-    "refreshButton": "更新",
+    "refreshButton": "再入場",
     "lastUpdate": "最終更新",
     "iconLoading": "アイコンデータを読み込み中...",
     "iconEmpty": "アイコンデータがありません",
@@ -170,9 +189,9 @@ window.DASHBOARD_CONFIG = {
     "iconFloat": true,
     "particles": "star",
     "particleDirection": "down",
-    "particleColor": "#ffff00",
+    "particleColor": "#ffffff",
     "particleSize": 0.75,
-    "particleOpacity": 1
+    "particleOpacity": 1.5
   },
   "deploy": {
     "owner": "colorsing-dashboard",
