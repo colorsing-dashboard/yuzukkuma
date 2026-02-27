@@ -1,6 +1,7 @@
 import { useConfig } from '../context/ConfigContext'
 import { convertDriveUrl } from '../lib/sheets'
 import CountUp from '../components/CountUp'
+import closedImg from '../assets/closed.png'
 
 const RANKING_FIELDS = { RANK: 0, NAME: 1, POINTS: 2, IMAGE: 3 }
 
@@ -102,9 +103,11 @@ const HomeView = ({ ranking, goals, events }) => {
                 />
                 {ended && (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-display font-black tracking-[0.4em] text-5xl md:text-7xl text-white drop-shadow-lg select-none">
-                      CLOSED
-                    </span>
+                    <img
+                      src={closedImg}
+                      alt="CLOSED"
+                      className="w-1/2 md:w-2/5 max-w-xs drop-shadow-2xl select-none pointer-events-none"
+                    />
                   </div>
                 )}
               </div>
