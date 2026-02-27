@@ -88,7 +88,7 @@ const HomeView = ({ ranking, goals, events }) => {
       {/* 次回イベント告知 */}
       <section className="max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-4xl font-body mb-4 md:mb-8 text-center text-glow-soft text-primary">
-          Next Event
+          New Event
         </h2>
         {events?.upcoming?.title ? (() => {
           const ended = events.upcoming.date ? isEventEnded(events.upcoming.date) : false
