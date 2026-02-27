@@ -46,15 +46,18 @@ const TitleText = ({ config, glowClass, compact = false }) => {
   const baseClass = `font-display font-black tracking-wide leading-tight drop-shadow-lg ${glowClass}`
 
   if (effectiveStyle === 'glass') {
-    const textFill = config.brand.titleTextFill || 'white'
+    const textFill = config.brand.titleTextFill || 'default'
     const o = config.colorOverrides || {}
     const gradientStyle = `linear-gradient(${dir}, var(--color-title-gradient-start, var(--color-ocean-teal)), var(--color-title-gradient-mid, var(--color-light-blue)), var(--color-title-gradient-end, var(--color-amber)))`
+    const defaultColor = 'var(--color-title, var(--color-primary))'
     const h1Style = { fontSize, ...(
       textFill === 'gradient'
         ? { backgroundImage: gradientStyle, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }
         : textFill === 'custom'
-          ? { color: o.titleColor || '#ffffff' }
-          : { color: '#ffffff' }
+          ? { color: o.titleColor || defaultColor }
+          : textFill === 'white'
+            ? { color: '#ffffff' }
+            : { color: defaultColor }
     )}
 
     return (
@@ -161,33 +164,45 @@ const Header = ({ lastUpdate, loading, onRefresh }) => {
     el.textContent = `.header-cs{${mobile}}@media(min-width:768px){.header-cs{${desktop}}}`
   }, [imgW, imgH, imgWM, imgHM, heightDesktop, heightMobile])
 
+  const desktopSrc = convertDriveUrl(config.images.headerDesktop, 1600)
+  const mobileSrc  = convertDriveUrl(config.images.headerMobile || config.images.headerDesktop, 800)
+
   return (
     <div
-      className="header-cs w-full relative overflow-hidden"
+      className={`${imgFit !== 'contain' ? 'header-cs ' : ''}w-full relative overflow-hidden`}
       style={{
         background: hasHeaderBg
           ? `linear-gradient(to bottom, var(--color-header-gradient-end, var(--color-deep-blue)), var(--color-header-gradient-start, var(--color-ocean-teal)) 50%, var(--color-header-gradient-end, var(--color-deep-blue)))`
           : 'transparent',
       }}
     >
-      <div
-        className="absolute inset-0 hidden md:block"
-        style={{
-          backgroundImage: sanitizeCssUrl(convertDriveUrl(config.images.headerDesktop, 1600)) || undefined,
-          backgroundSize: imgFit,
-          backgroundPosition: imgFit === 'contain' ? 'top center' : 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      ></div>
-      <div
-        className="absolute inset-0 md:hidden"
-        style={{
-          backgroundImage: sanitizeCssUrl(convertDriveUrl(config.images.headerMobile, 800)) || undefined,
-          backgroundSize: imgFit,
-          backgroundPosition: imgFit === 'contain' ? 'top center' : 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      ></div>
+      {imgFit === 'contain' ? (
+        <>
+          {mobileSrc  && <img className="md:hidden  w-full block" src={mobileSrc}  alt="" />}
+          {desktopSrc && <img className="hidden md:block w-full" src={desktopSrc} alt="" />}
+        </>
+      ) : (
+        <>
+          <div
+            className="absolute inset-0 hidden md:block"
+            style={{
+              backgroundImage: sanitizeCssUrl(desktopSrc) || undefined,
+              backgroundSize: imgFit,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          ></div>
+          <div
+            className="absolute inset-0 md:hidden"
+            style={{
+              backgroundImage: sanitizeCssUrl(mobileSrc) || undefined,
+              backgroundSize: imgFit,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          ></div>
+        </>
+      )}
       <div className="absolute inset-0 bg-black" style={{ opacity: overlayOpacity }}></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEuNSIgZmlsbD0icmdiYSgxMzgsIDE4MCwgMjQ4LCAwLjA1KSIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIiIGZpbGw9InJnYmEoMTM4LCAxODAsIDI0OCwgMC4wOCkiLz48Y2lyY2xlIGN4PSIzNSIgY3k9IjEwIiByPSIxIiBmaWxsPSJyZ2JhKDEzOCwgMTgwLCAyNDgsIDAuMDMpIi8+PC9zdmc+')] opacity-20 animate-float"></div>
       {config.brand.showTitle !== false && (

@@ -163,11 +163,11 @@ const BrandingTab = ({ config, updateConfig }) => {
             <div className="space-y-3 pl-3 border-l-2 border-amber/20">
               <div>
                 <label className="block text-xs text-gray-500 mb-1">文字カラー</label>
-                <div className="flex gap-2">
-                  {[['white','白（固定）'],['gradient','グラデーション'],['custom','カスタム']].map(([v, label]) => (
+                <div className="flex gap-2 flex-wrap">
+                  {[['default','タイトルカラー追従'],['gradient','グラデーション'],['custom','カスタム']].map(([v, label]) => (
                     <button key={v}
                       onClick={() => updateConfig('brand.titleTextFill', v)}
-                      className={`px-3 py-1 rounded text-xs transition-all ${(config.brand.titleTextFill || 'white') === v ? 'bg-amber text-deep-blue font-bold' : 'glass-effect border border-light-blue/30 text-gray-300'}`}
+                      className={`px-3 py-1 rounded text-xs transition-all ${(config.brand.titleTextFill || 'default') === v ? 'bg-amber text-deep-blue font-bold' : 'glass-effect border border-light-blue/30 text-gray-300'}`}
                     >{label}</button>
                   ))}
                 </div>
