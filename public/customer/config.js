@@ -18,8 +18,8 @@ window.DASHBOARD_CONFIG = {
     "titleGradientDirection": "to-r",
     "titleGlow": false,
     "titlePosition": "center",
-    "titleSize": "large",
-    "titleTextFill": "white",
+    "titleSize": "medium",
+    "titleTextFill": "default",
     "titleGlassBg": 0.25,
     "titleGlassBlur": 9,
     "titlePaddingY": 6,
@@ -82,6 +82,7 @@ window.DASHBOARD_CONFIG = {
     "benefitsContentSheetName": "特典内容",
     "historySheetName": "特典履歴",
     "iconSheetName": "枠内アイコン",
+    "eventSheetName": "イベント",
     "ranges": {
       "ranking": "D2:G5",
       "goals": "A2:B10",
@@ -113,6 +114,13 @@ window.DASHBOARD_CONFIG = {
       "title": "ボトルキープ一覧"
     },
     {
+      "id": "events",
+      "label": "イベント",
+      "icon": "📖",
+      "enabled": true,
+      "title": "イベント"
+    },
+    {
       "id": "icons",
       "label": "枠内アイコン",
       "icon": "🖼️",
@@ -123,7 +131,7 @@ window.DASHBOARD_CONFIG = {
   "benefitTiers": [
     {
       "key": "1k",
-      "icon": "🖼️",
+      "icon": "🏠",
       "columnIndex": 0,
       "displayTemplate": "特典: {value}",
       "isMembership": false
@@ -177,7 +185,9 @@ window.DASHBOARD_CONFIG = {
       "icon": "🌟",
       "columnIndex": 0,
       "displayTemplate": "特典: {value}",
-      "isMembership": true
+      "isMembership": true,
+      "useKey": false,
+      "accessKey": ""
     }
   ],
   "home": {
