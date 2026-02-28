@@ -185,7 +185,7 @@ window.DASHBOARD_CONFIG = {
   ],
   "home": {
     "rankingTitle": "Ranking",
-    "pointsLabel": "採蜜",
+    "pointsLabel": "採集",
     "pointsUnit": "kg",
     "targetsTitle": "Targets",
     "targetLabels": [
