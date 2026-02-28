@@ -13,9 +13,24 @@ window.DASHBOARD_CONFIG = {
     "loadingText": "Loading...",
     "showHeader": true,
     "showTitle": true,
+    "titleStyle": "glass",
     "titleGradient": true,
     "titleGradientDirection": "to-r",
-    "titleGlow": false
+    "titleGlow": true,
+    "titlePosition": "center",
+    "titleSize": "medium",
+    "titleTextFill": "default",
+    "titleGlassBg": 0.2,
+    "titleGlassBlur": 1,
+    "titlePaddingY": 2,
+    "headerOverlayOpacity": 0.1,
+    "headerImageFit": "contain",
+    "headerHeight": "",
+    "headerHeightMobile": "",
+    "headerImageW": 0,
+    "headerImageH": 0,
+    "headerImageWMobile": 0,
+    "headerImageHMobile": 0
   },
   "colors": {
     "deepBlue": "#0c0a04",
@@ -36,7 +51,7 @@ window.DASHBOARD_CONFIG = {
     "primaryText": "#d8e84a",
     "accentText": "",
     "rank1Card": "",
-    "backgroundMain": "",
+    "backgroundMain": "#737373",
     "backgroundMid": "",
     "nameText": "#ffffff",
     "footerText": "",
@@ -45,6 +60,8 @@ window.DASHBOARD_CONFIG = {
     "subText": "",
     "popupOverlayColor": "",
     "popupOverlayOpacity": "",
+    "menuCardLabelColor": "",
+    "menuCardLabelOpacity": "",
     "glassBgColor": "",
     "glassBgOpacity": ""
   },
@@ -67,6 +84,7 @@ window.DASHBOARD_CONFIG = {
     "benefitsContentSheetName": "特典内容",
     "historySheetName": "特典履歴",
     "iconSheetName": "枠内アイコン",
+    "eventSheetName": "イベント",
     "ranges": {
       "ranking": "D2:G5",
       "goals": "A2:B10",
@@ -102,6 +120,13 @@ window.DASHBOARD_CONFIG = {
       "icon": "🖼️",
       "enabled": true,
       "title": "各種枠内アイコン"
+    },
+    {
+      "id": "events",
+      "label": "イベント",
+      "icon": "📖",
+      "enabled": false,
+      "title": "イベント"
     }
   ],
   "benefitTiers": [
