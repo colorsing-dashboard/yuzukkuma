@@ -86,7 +86,7 @@ window.DASHBOARD_CONFIG = {
     "iconSheetName": "枠内アイコン",
     "eventSheetName": "イベント",
     "ranges": {
-      "ranking": "D2:G5",
+      "ranking": "D2:G7",
       "goals": "A2:B10",
       "benefits": "A2:E20"
     },
