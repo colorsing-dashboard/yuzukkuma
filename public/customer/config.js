@@ -124,9 +124,9 @@ window.DASHBOARD_CONFIG = {
     {
       "id": "events",
       "label": "イベント",
-      "icon": "📖",
-      "enabled": false,
-      "title": "イベント"
+      "icon": "🥂",
+      "enabled": true,
+      "title": "開催情報"
     }
   ],
   "benefitTiers": [
