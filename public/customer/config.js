@@ -134,8 +134,9 @@ window.DASHBOARD_CONFIG = {
       "key": "1k",
       "icon": "🖼️",
       "columnIndex": 0,
-      "displayTemplate": "特典: {value}",
-      "isMembership": false
+      "displayTemplate": "獲得済",
+      "isMembership": false,
+      "isBoolean": true
     },
     {
       "key": "5k",
