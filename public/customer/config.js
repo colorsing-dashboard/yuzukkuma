@@ -34,11 +34,12 @@ window.DASHBOARD_CONFIG = {
   },
   "colors": {
     "deepBlue": "#0c0a04",
-    "oceanTeal": "#8a844d",
+    "oceanTeal": "#9c991c",
     "lightBlue": "#c89828",
     "amber": "#e8d080",
     "accent": "#ff0000",
-    "gold": "#ffd700"
+    "gold": "#ffd700",
+    "brightness": "dark"
   },
   "colorOverrides": {
     "headerGradientStart": "",
