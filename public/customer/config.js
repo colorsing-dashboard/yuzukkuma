@@ -18,7 +18,7 @@ window.DASHBOARD_CONFIG = {
     "titleGradientDirection": "to-r",
     "titleGlow": true,
     "titlePosition": "center",
-    "titleSize": "medium",
+    "titleSize": "large",
     "titleTextFill": "default",
     "titleGlassBg": 0.2,
     "titleGlassBlur": 1,
