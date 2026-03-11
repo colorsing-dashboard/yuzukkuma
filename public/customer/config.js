@@ -196,6 +196,7 @@ window.DASHBOARD_CONFIG = {
     ],
     "faq": {
       "enabled": true,
+      "accordion": true,
       "title": "📝 FAQ・注意事項",
       "items": [
         {
