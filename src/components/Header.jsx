@@ -52,21 +52,32 @@ const TitleText = ({ config, glowClass, compact = false }) => {
     return (
       <div className="inline-block">
         <div
-          className="px-6 rounded-xl"
+          className="px-6 rounded-xl relative overflow-hidden"
           style={{
-            backgroundColor: isDark ? `rgba(0,0,0,${glassBg})` : `rgba(255,255,255,${glassBg})`,
-            backdropFilter: `blur(${glassBlur}px) saturate(${isDark ? 1.4 : 1.8}) brightness(${isDark ? 1 : 1.08})`,
-            WebkitBackdropFilter: `blur(${glassBlur}px) saturate(${isDark ? 1.4 : 1.8}) brightness(${isDark ? 1 : 1.08})`,
-            border: isDark ? '1px solid rgba(255,255,255,0.15)' : '1px solid rgba(255,255,255,0.6)',
+            backdropFilter: `blur(${glassBlur}px)`,
+            WebkitBackdropFilter: `blur(${glassBlur}px)`,
+            border: isDark ? '1px solid rgba(255,255,255,0.18)' : '1px solid rgba(0,0,0,0.06)',
             boxShadow: isDark
-              ? '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)'
-              : '0 8px 32px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.8), 0 1px 3px rgba(0,0,0,0.04)',
+              ? '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08)'
+              : '0 4px 24px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.6)',
             paddingTop: `${paddingY}px`,
             paddingBottom: `${paddingY}px`,
           }}
         >
+          {/* ガラス内部: 半透明ベース + 光の反射グラデーション */}
+          <div className="absolute inset-0 rounded-xl" style={{
+            background: isDark
+              ? `linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.06) 100%)`
+              : `linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.4) 100%)`,
+          }} />
+          {/* ガラス内部: 上辺ハイライト */}
+          <div className="absolute top-0 left-[10%] right-[10%] h-[1px]" style={{
+            background: isDark
+              ? 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)'
+              : 'linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent)',
+          }} />
           <h1
-            className={textFill === 'gradient' ? `${baseClass} bg-clip-text text-transparent` : baseClass}
+            className={`relative ${textFill === 'gradient' ? `${baseClass} bg-clip-text text-transparent` : baseClass}`}
             style={h1Style}
           >
             {config.brand.name}
@@ -170,18 +181,14 @@ const Header = ({ lastUpdate, loading, onRefresh }) => {
     el.textContent = `.header-cs{${mobile}}@media(min-width:768px){.header-cs{${desktop}}}`
   }, [imgW, imgH, imgWM, imgHM, heightDesktop, heightMobile, hasImage])
 
-  // 画像もグラデーション設定もない場合、ガラスエフェクト用にテーマカラーの淡いグラデーションを自動生成
-  const autoGradient = !hasImage && !hasHeaderBg
-  const headerBg = hasHeaderBg
-    ? `linear-gradient(to bottom, var(--color-header-gradient-end, var(--color-deep-blue)), var(--color-header-gradient-start, var(--color-ocean-teal)) 50%, var(--color-header-gradient-end, var(--color-deep-blue)))`
-    : autoGradient
-      ? `linear-gradient(135deg, var(--color-ocean-teal), var(--color-deep-blue) 40%, var(--color-light-blue) 70%, var(--color-ocean-teal))`
-      : 'transparent'
-
   return (
     <div
       className={`${imgFit !== 'contain' || !hasImage ? 'header-cs ' : ''}w-full relative overflow-hidden`}
-      style={{ background: headerBg }}
+      style={{
+        background: hasHeaderBg
+          ? `linear-gradient(to bottom, var(--color-header-gradient-end, var(--color-deep-blue)), var(--color-header-gradient-start, var(--color-ocean-teal)) 50%, var(--color-header-gradient-end, var(--color-deep-blue)))`
+          : 'transparent',
+      }}
     >
       {imgFit === 'contain' ? (
         <>
@@ -210,7 +217,7 @@ const Header = ({ lastUpdate, loading, onRefresh }) => {
           ></div>
         </>
       )}
-      {(hasImage || hasHeaderBg || autoGradient) && (
+      {(hasImage || hasHeaderBg) && (
         <>
           <div className="absolute inset-0 bg-black" style={{ opacity: overlayOpacity }}></div>
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEuNSIgZmlsbD0icmdiYSgxMzgsIDE4MCwgMjQ4LCAwLjA1KSIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIiIGZpbGw9InJnYmEoMTM4LCAxODAsIDI0OCwgMC4wOCkiLz48Y2lyY2xlIGN4PSIzNSIgY3k9IjEwIiByPSIxIiBmaWxsPSJyZ2JhKDEzOCwgMTgwLCAyNDgsIDAuMDMpIi8+PC9zdmc+')] opacity-20 animate-float"></div>
