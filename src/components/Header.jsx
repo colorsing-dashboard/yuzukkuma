@@ -51,9 +51,9 @@ const TitleText = ({ config, glowClass, compact = false }) => {
     // ライトテーマ: 暗い色でコントラストを出す / ダークテーマ: 明るい色で光を表現
     const tintRgb = isDark ? '180,220,255' : '80,120,160'
     const tintAmount = config.brand.glassTint ?? 0.08
-    const reflection = config.brand.glassReflection ?? 0.35
-    const specular = config.brand.glassSpecular ?? 0.7
-    const edgeSpread = config.brand.glassEdge ?? 30
+    const reflection = config.brand.glassReflection ?? 0.75
+    const specular = config.brand.glassSpecular ?? 0.95
+    const edgeSpread = config.brand.glassEdge ?? 60
 
     // ライトテーマでは効果を強調（白背景で見えるように）
     const t = isDark ? tintAmount : tintAmount * 2.5
