@@ -47,13 +47,22 @@ const TitleText = ({ config, glowClass, compact = false }) => {
           : { color: 'var(--color-title, var(--color-primary))' }
     )}
 
+    const isDark = (config.colors.brightness || 'dark') === 'dark'
+    const glassBase = isDark ? '0,0,0' : '255,255,255'
+    const borderColor = isDark ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.5)'
+    const shadowColor = isDark ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.08)'
+    const highlightColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(255,255,255,0.7)'
+
     return (
       <div className="inline-block">
         <div
           className="px-6 rounded-xl"
           style={{
-            backgroundColor: `rgba(0,0,0,${glassBg})`,
-            backdropFilter: `blur(${glassBlur}px)`,
+            backgroundColor: `rgba(${glassBase},${glassBg})`,
+            backdropFilter: `blur(${glassBlur}px) saturate(1.4)`,
+            WebkitBackdropFilter: `blur(${glassBlur}px) saturate(1.4)`,
+            border: `1px solid ${borderColor}`,
+            boxShadow: `0 8px 32px ${shadowColor}, inset 0 1px 0 ${highlightColor}`,
             paddingTop: `${paddingY}px`,
             paddingBottom: `${paddingY}px`,
           }}
