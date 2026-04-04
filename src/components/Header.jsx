@@ -54,7 +54,7 @@ const TitleText = ({ config, glowClass, compact = false }) => {
         <div
           className="px-6 rounded-xl"
           style={{
-            backgroundColor: isDark ? `rgba(0,0,0,${glassBg})` : `rgba(255,255,255,${glassBg * 0.6})`,
+            backgroundColor: isDark ? `rgba(0,0,0,${glassBg})` : `rgba(255,255,255,${glassBg})`,
             backdropFilter: `blur(${glassBlur}px) saturate(${isDark ? 1.4 : 1.8}) brightness(${isDark ? 1 : 1.08})`,
             WebkitBackdropFilter: `blur(${glassBlur}px) saturate(${isDark ? 1.4 : 1.8}) brightness(${isDark ? 1 : 1.08})`,
             border: isDark ? '1px solid rgba(255,255,255,0.15)' : '1px solid rgba(255,255,255,0.6)',
