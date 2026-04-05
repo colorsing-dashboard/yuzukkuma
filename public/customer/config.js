@@ -30,7 +30,11 @@ window.DASHBOARD_CONFIG = {
     "headerImageW": 0,
     "headerImageH": 0,
     "headerImageWMobile": 0,
-    "headerImageHMobile": 0
+    "headerImageHMobile": 0,
+    "glassTint": 0.08,
+    "glassReflection": 0.75,
+    "glassSpecular": 0.95,
+    "glassEdge": 60
   },
   "colors": {
     "deepBlue": "#0c0a04",
@@ -63,6 +67,8 @@ window.DASHBOARD_CONFIG = {
     "popupOverlayOpacity": "",
     "menuCardLabelColor": "",
     "menuCardLabelOpacity": "",
+    "tierCardBgColor": "",
+    "tierCardBgOpacity": "",
     "glassBgColor": "",
     "glassBgOpacity": ""
   },
