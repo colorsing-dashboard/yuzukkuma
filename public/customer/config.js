@@ -21,7 +21,7 @@ window.DASHBOARD_CONFIG = {
     "titleSize": "large",
     "titleTextFill": "default",
     "titleGlassBg": 0.2,
-    "titleGlassBlur": 1,
+    "titleGlassBlur": 6,
     "titlePaddingY": 2,
     "headerOverlayOpacity": 0.1,
     "headerImageFit": "contain",
@@ -32,9 +32,9 @@ window.DASHBOARD_CONFIG = {
     "headerImageWMobile": 0,
     "headerImageHMobile": 0,
     "glassTint": 0.08,
-    "glassReflection": 0.75,
-    "glassSpecular": 0.95,
-    "glassEdge": 60
+    "glassReflection": 0.3,
+    "glassSpecular": 0.35,
+    "glassEdge": 15
   },
   "colors": {
     "deepBlue": "#0c0a04",
@@ -53,7 +53,7 @@ window.DASHBOARD_CONFIG = {
     "titleGradientEnd": "",
     "cardBorder": "",
     "cardBorderHover": "",
-    "primaryText": "#d8e84a",
+    "primaryText": "#ffe100",
     "accentText": "",
     "rank1Card": "",
     "backgroundMain": "#737373",
@@ -69,6 +69,12 @@ window.DASHBOARD_CONFIG = {
     "menuCardLabelOpacity": "",
     "tierCardBgColor": "",
     "tierCardBgOpacity": "",
+    "menuCardBgColor": "",
+    "menuCardBgOpacity": "",
+    "sidebarBgColor": "",
+    "sidebarBgOpacity": "",
+    "bottomNavBgColor": "",
+    "bottomNavBgOpacity": "",
     "glassBgColor": "",
     "glassBgOpacity": ""
   },
