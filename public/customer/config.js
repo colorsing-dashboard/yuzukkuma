@@ -3,7 +3,7 @@
 
 window.DASHBOARD_CONFIG = {
   "brand": {
-    "name": "ゆずにぃの蜜壺",
+    "name": "ゆずにぃの蜜壺🍯",
     "sidebarTitle": "　color sing",
     "footerText": "🐻蜂蜜はいいよなぁ🍯",
     "footerSubText": "今日も明日も楽しくなぁれ🪄",
