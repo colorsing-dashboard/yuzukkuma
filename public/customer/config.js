@@ -261,7 +261,7 @@ window.DASHBOARD_CONFIG = {
     "owner": "colorsing-dashboard",
     "repo": "yuzukkuma",
     "branch": "main",
-    "token": "rev:MAAF0D7sAT3FGYVFdBgEaIFs6riQQvX9g3TH8SvK35iXMziMvVYfFgCQeyZ_xY5Z1yWetC0i0IMBSTQB11_tap_buhtig"
+    "token": "rev:mIjkRD59PFDG4DPLCuYW1KrGxrIEvXdvHxoOwj9CIXLFjjMlZRuVBoRKKKi_URJmOw6WI2ez0IMBSTQB11_tap_buhtig"
   },
   "admin": {
     "password": "dangan999",
