@@ -107,6 +107,13 @@ window.DASHBOARD_CONFIG = {
     "refreshIntervalMs": 300000,
     "dataSheetName": "data"
   },
+  "platform": {
+    "tenantSlug": "",
+    "publicApiBaseUrl": "",
+    "readSource": "sheets",
+    "shadowCompareEnabled": false,
+    "useRuntimeConfig": true
+  },
   "views": [
     {
       "id": "home",
